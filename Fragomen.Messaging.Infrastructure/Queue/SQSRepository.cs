@@ -21,7 +21,7 @@ namespace Fragomen.Messaging.Infrastructure.Queue
 
         public SQSRepository(IOptions<ConfigurationOptions> options, IRepository<EmailMessage> emailMessageRepository)
         {
-            this.sqsClient = new AmazonSQSClient("AKIAVRUVTS7M4XEOVWRP", "BbHRZ+wvwyvAGEm7PEoQKckXWj66BaStJ1piXCfg");
+            this.sqsClient = new AmazonSQSClient();
             this._options = options;
             this.emailMessageRepository = emailMessageRepository;
         }
